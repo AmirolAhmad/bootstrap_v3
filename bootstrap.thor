@@ -93,7 +93,7 @@ class Bootstrap < Thor
 
       # STYLESHEETS
       say_status "STEP", "GENERATE STYLESHEETS TEMPLATES"
-      css_template_path = source_root + "lib/generators/bootstrap/install/templates/bootstrap/"
+      css_template_path = source_root + "lib/generators/bootstrap/install/templates/bootstrap.less"
 
       stylesheets_path = Pathname.new(source_root + "vendor/assets/stylesheets/bootstrap")
 
