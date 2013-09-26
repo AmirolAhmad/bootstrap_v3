@@ -1,7 +1,7 @@
 module Bootstrap
   module V3
     module Rails
-      VERSION = "0.0.8"
+      VERSION = "0.0.9"
     end
   end
 end
