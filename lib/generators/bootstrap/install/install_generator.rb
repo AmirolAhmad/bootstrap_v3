@@ -20,15 +20,15 @@ module Bootstrap
         end
 
         # copy less manifests
-        css_manifests = 'app/assets/stylesheets/bootstrap'
+        css_manifests = 'app/assets/stylesheets/bootstrap.less'
 
-        if File.directory?(css_manifests)
+        if File.exist?(css_manifests)
           puts <<-EOM
           Notice:
             #{css_manifests} exist; skipping
           EOM
         else
-          directory "bootstrap", css_manifests, :recursive => true
+          copy_file "bootstrap.less", "app/assets/stylesheets/bootstrap.less"
         end
 
       end
