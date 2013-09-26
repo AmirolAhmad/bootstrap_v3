@@ -5,12 +5,12 @@ require 'semantic/ui/rails/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "bootstrap_v3"
-  spec.version       = Semantic::Ui::Rails::VERSION
+  spec.version       = Bootstrap::V3::Rails::VERSION
   spec.authors       = ["AmirolAhmad"]
   spec.email         = ["9w2pdf@gmail.com"]
   spec.description   = %q{Bootstrap V3 for Ruby on Rails}
   spec.summary       = %q{Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/AmirolAhmad/bootstrap_v3"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
