@@ -16,7 +16,7 @@ module Bootstrap
             #{js_manifest} exist; skipping
           EOM
         else
-          copy_file "bootstrap.js", "app/assets/javascripts/bootstrap.js"
+          copy_file "bootstrap_v3.js", "app/assets/javascripts/bootstrap.js"
         end
 
         # copy less manifests
