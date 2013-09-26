@@ -63,11 +63,11 @@ class Bootstrap < Thor
 
       # JAVASCRIPTS
       javascripts_path = "vendor/assets/javascripts/bootstrap_v3/"
-      run "rsync -avm --include='*.js' -f 'hide,! */' #{git_root + 'js/'} #{source_root + javascripts_path}"
+      run "rsync -avm --include='*.js' -f 'hide,! */' #{git_root + 'dist/js/'} #{source_root + javascripts_path}"
 
       # FONTS
       fonts_path = "vendor/assets/fonts/bootstrap_v3"
-      run "rsync -avm --include='*.*' -f 'hide,! */' #{git_root + 'fonts/'} #{source_root + fonts_path}"
+      run "rsync -avm --include='*.*' -f 'hide,! */' #{git_root + 'dist/fonts/'} #{source_root + fonts_path}"
     end
 
     def generate_templates
