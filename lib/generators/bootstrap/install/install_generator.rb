@@ -19,8 +19,8 @@ module Bootstrap
           copy_file "bootstrap.js", "app/assets/javascripts/bootstrap.js"
         end
 
-        # copy less manifests
-        css_manifests = 'app/assets/stylesheets/bootstrap.less'
+        # copy css manifests
+        css_manifests = 'app/assets/stylesheets/bootstrap.css'
 
         if File.exist?(css_manifests)
           puts <<-EOM
@@ -28,7 +28,7 @@ module Bootstrap
             #{css_manifests} exist; skipping
           EOM
         else
-          copy_file "bootstrap.less", "app/assets/stylesheets/bootstrap.less"
+          copy_file "bootstrap.css", "app/assets/stylesheets/bootstrap.css"
         end
 
       end
