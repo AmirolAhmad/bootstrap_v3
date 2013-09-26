@@ -8,7 +8,7 @@ module Bootstrap
 
       def add_assets
         # copy js manifest
-        js_manifest = 'app/assets/javascripts/bootstrap.js'
+        js_manifest = 'app/assets/javascripts/bootstrap_v3.js'
 
         if File.exist?(js_manifest)
           puts <<-EOM
@@ -16,7 +16,7 @@ module Bootstrap
             #{js_manifest} exist; skipping
           EOM
         else
-          copy_file "bootstrap.js", "app/assets/javascripts/bootstrap.js"
+          copy_file "bootstrap.js", "app/assets/javascripts/bootstrap_v3.js"
         end
 
         # copy less manifests
