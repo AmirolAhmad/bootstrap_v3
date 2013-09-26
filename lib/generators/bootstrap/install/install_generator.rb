@@ -16,11 +16,11 @@ module Bootstrap
             #{js_manifest} exist; skipping
           EOM
         else
-          copy_file "bootstrap_v3.js", "app/assets/javascripts/bootstrap.js"
+          copy_file "bootstrap.js", "app/assets/javascripts/bootstrap.js"
         end
 
         # copy less manifests
-        css_manifests = 'app/assets/stylesheets/bootstrap_v3'
+        css_manifests = 'app/assets/stylesheets/bootstrap'
 
         if File.directory?(css_manifests)
           puts <<-EOM
@@ -28,7 +28,7 @@ module Bootstrap
             #{css_manifests} exist; skipping
           EOM
         else
-          directory "bootstrap_v3", css_manifests, :recursive => true
+          directory "bootstrap", css_manifests, :recursive => true
         end
 
       end
