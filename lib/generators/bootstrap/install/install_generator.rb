@@ -31,6 +31,18 @@ module Bootstrap
           copy_file "bootstrap.css", "app/assets/stylesheets/bootstrap.css"
         end
 
+        # copy fonts manifests
+        fonts_manifests = 'app/assets/fonts'
+
+        if File.directory?(fonts_manifests)
+          puts <<-EOM
+          Notice:
+            #{fonts_manifests} exist; skipping
+          EOM
+        else
+          directory "fonts", fonts_manifests, :recursive => true
+        end
+
       end
     end
   end
